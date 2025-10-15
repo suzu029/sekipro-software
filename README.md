@@ -1,2 +1,2 @@
 # sekipro-software
-hello by sagawa
+sagawa
