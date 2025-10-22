@@ -1,5 +1,6 @@
 <head>
 <TITLE>myphp</TITLE>
+<link rel="stylesheet" href="css/myphp.css">
 </head>
 
 <body>
