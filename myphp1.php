@@ -48,7 +48,7 @@ if ($result = mysqli_query($dbHandle, $sql)) {
 
 	// フィールド名に応じて表示名を設定
         if ($fieldName === 'id') {
-            $displayName = 'No.';
+            continue;
         } elseif ($fieldName === 's_number') {
             $displayName = '学籍番号';
         } elseif ($fieldName === 'name') {
@@ -74,6 +74,9 @@ while($row=mysqli_fetch_array($rs)){
 	
 //テーブルの列数と同じ回数を繰り返す
 	for($j=0;$j<$num;$j++){
+		if ($j === 0) { 
+            continue;
+        }
 	
 //HTML文を出力 列の内容を <td>で囲んで出力
 		print("<td>".$row[$j]."</td>");
