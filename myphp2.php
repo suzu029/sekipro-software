@@ -18,16 +18,24 @@ print("</HEAD>\n");
 print("<BODY>\n");
 
 //HTML文を出力 登録確認
-print("<b>登録確認</b><br><br>");
+print("<b>提出確認</b><br><br>");
 
 //HTML文を出力 FORMの開始
 print("<FORM action=myphp2-1.php method=post>");
 
 //HTML文を出力 入力フィールドの説明
-print("学籍番号を入力してください<br><br>");
+print("学籍番号と提出状況を選択してください<br><br>"); // 説明文変更
 
 //HTML文を出力 入力フィールドの指定
-print("<INPUT type=text name=s_number size=8 maxlengh=8><br><br>");
+print("学籍番号: <INPUT type=text name=s_number size=8 maxlengh=8 required><br><br>"); // requiredを追加
+
+// HTML文を出力 入力フィールドの指定 (提出状況のプルダウン)
+print("提出状況: <select name=\"sub\" required>");
+print("<option value=\"\">選択してください</option>");
+print("<option value=\"全て\">全て</option>"); // 全てのデータを見る選択肢
+print("<option value=\"提出済み\">提出済み</option>");
+print("<option value=\"未提出\">未提出</option>");
+print("</select><br><br>");
 
 //HTML文を出力 確認ボタン
 print("<INPUT type=submit value=確認>");
