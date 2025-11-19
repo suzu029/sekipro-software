@@ -42,7 +42,7 @@ function reservation($date,$reservation_array){
     $output = '';
     foreach ($reservation_array[$date] as $reservation_info){
         $output .= "<br/><span class = 'black'>";
-        //$output .= "<strong>".$reservation_info['name']."</strong><br/>";
+        $output .= "<strong>".$reservation_info['name']."</strong><br/>";
         $output .=  $reservation_info['subject']."<br/>";
         $output .=  $reservation_info['sub']."<br/>";
         $output .= "</span>"; 
