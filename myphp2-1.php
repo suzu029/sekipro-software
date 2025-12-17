@@ -8,6 +8,8 @@ print("<HEAD>\n");
 //文字コードをUTF-8と指定
 print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
 
+print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp2-1.css\">\n");
+
 //HTML文を出力 TITLEの指定
 print("<TITLE>myphp2-1</TITLE>\n");
 
@@ -92,7 +94,7 @@ if ($stmt) {
     // 入力された学籍番号の行があった場合はデータを出力する
     if ($rows > 0) {
         print("<b>検索結果</b><br><br>");
-        print("学籍番号 [" . htmlspecialchars($search_s_number) . "] の**" . $sub_display_text . "**データが " . $rows . " 件見つかりました。<br><br>");
+        print("<h1>学籍番号 [" . htmlspecialchars($search_s_number) . "] の**" . $sub_display_text . "**データが " . $rows . " 件見つかりました。</h1><br><br>");
 
         print("<TABLE border=1>");
         print("<tr>");
