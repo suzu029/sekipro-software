@@ -6,10 +6,12 @@ print("<HTML>\n");
 print("<HEAD>\n");
 
 //文字コードをUTF-8と指定
-print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
+print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=UTF-8\">\n");
 
 //HTML文を出力 TITLEの指定
 print("<TITLE>myphp3</TITLE>\n");
+
+print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp3.css\">\n");
 
 //HTML文を出力 HEADの終了
 print("</HEAD>\n");
@@ -30,7 +32,7 @@ print("新規登録するデータを入力してください<br><br>");
 print("<TABLE border=1>");
 
 //HTML文を出力 入力フィールドの指定
-print("<tr><td><b>学籍番号</b></td><td>" . "<INPUT type=text name=s_number size=40 maxlengh=10 required></td></tr>");
+print("<tr><td><b>学籍番号</b></td><td>" . "<INPUT type=number name=s_number size=40 maxlengh=10 required></td></tr>");
 
 //HTML文を出力 入力フィールドの指定
 print("<tr><td><b>名前</b></td><td>" . "<INPUT type=text name=name size=40 maxlengh=40 required></td></tr>");
