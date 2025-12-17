@@ -23,7 +23,7 @@ print("</HEAD>\n");
 print("<BODY>\n");
 
 // ACTOR_CDフィールドへの入力の有無をチェック
-if (strlen(filter_input(INPUT_POST,'s_number')) == 0) {
+if (strlen(filter_input(INPUT_POST, 's_number') ?? '') == 0) {
     // 学籍番号が入力されていない場合：検索フォームを表示
     print("<b>登録削除</b><br><br>");
     print("<FORM action=myphp4.php method=post>"); // 自分自身にPOST
