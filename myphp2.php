@@ -8,6 +8,8 @@ print("<HEAD>\n");
 //文字コードをUTF-8と指定
 print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
 
+print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp2.css\">\n");
+
 //HTML文を出力 TITLEの指定
 print("<TITLE>myphp2</TITLE>\n");
 

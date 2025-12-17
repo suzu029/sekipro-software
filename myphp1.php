@@ -4,7 +4,7 @@ print("<HTML>\n");
 
 //HTML文を出力 HEADの開始
 print("<HEAD>\n");
-print("<b>提出状況</b><br><br>");
+print("<b>一覧</b><br><br>");
 
 //文字コードをUTF-8と指定
 print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
