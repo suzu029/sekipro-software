@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebebebef; 
+    text-align: center; 
+    padding: 50px 20px;
+    margin: 0;
+    max-width: 640px; 
+    margin: 0 auto;
+}
+
+/* 見出し（<b>タグ部分など） */
+b {
+    display: block; 
+    font-size: 3.5em;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db; /* ヘッダーの背景色 */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 縞々模様にして見やすくする */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* マウスホバーで色を変える */
+}
+
+/* 入力フォームとボタン */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff; 
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+input[type="reset"] {
+    background-color: #95a5a6;
+    color: white;
+}
+
+/* リンク（戻る・メニュー） */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}

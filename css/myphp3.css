@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ebebebef; 
+    text-align: center; 
+    padding: 50px 20px;
+    margin: 0;
+    max-width: 640px; 
+    margin: 0 auto;
+}
+
+
+body > b {
+    display: block; 
+    font-size: 3.5em;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body > a {
+    display: inline-block; 
+    width: 100px; 
+    box-sizing: border-box; 
+    
+    padding: 10px 10px;
+    margin: 10px 5px; 
+    
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 20px;
+    text-align: center;
+    
+    background-color: #ffffff; 
+    color: #333; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.5s, box-shadow 0.2s; 
+}
+
+
+body > a:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* テーブル全体 */
+table {
+    width: 90%; /* テーブルの幅をページ最大幅の90%に設定 */
+    margin: 20px auto; /* 上下に20pxのマージン、左右autoで中央配置 */
+    border-collapse: collapse; /* ボーダーを重ねて見やすくする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 浮き出し効果 */
+    background-color: #ffffff; /* テーブルの背景を白に */
+}
+
+/* ヘッダーセル（列名） */
+table td b {
+    display: block; /* b要素をブロック化してパディングを適用可能に */
+    background-color: #4a90e2; /* 以前のリンク1の色を使用 */
+    color: #ffffff;
+    padding: 10px 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* データセル（中身） */
+table td {
+    padding: 8px 5px;
+    border: 1px solid #ddd; /* 薄いグレーの線 */
+    text-align: left; /* セル内のテキストを中央揃え */
+    font-size: 0.9em;
+    color: #333;
+
+    input[type="number"],
+    input[type="text"],
+    input[type="date"]
+    select {
+    width: 250px; /* 任意の幅に変更してください */
+    box-sizing: border-box; /* 幅にpaddingとborderを含めるように設定 */
+    }
+
+input[type="submit"],
+input[type="reset"] {
+    /* ... 以前提案したデザインCSS ... */
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    border: none;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+}
+
+input[type="reset"] {
+    background-color: #6c757d;
+}
+
+}

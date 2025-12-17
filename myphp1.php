@@ -4,13 +4,15 @@ print("<HTML>\n");
 
 //HTML文を出力 HEADの開始
 print("<HEAD>\n");
-print("<b>提出状況</b><br><br>");
+print("<b>一覧</b><br><br>");
 
 //文字コードをUTF-8と指定
 print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
 
 //HTML文を出力 TITLEの指定
 print("<TITLE>myphp1</TITLE>\n");
+
+print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp1.css\">\n");
 
 //HTML文を出力 HEADの終了
 print("</HEAD>\n");
@@ -41,9 +43,28 @@ print("<table border=1>");
 //mysqli_fetch_field関数を使用しテーブルの列名を出力する
 if ($result = mysqli_query($dbHandle, $sql)) {
 	while ($finfo = mysqli_fetch_field($rs)) {
-	echo "<td><b>".$finfo->name."</b></td>";
-	}
+	$fieldName = $finfo->name;
+	$displayName = $fieldName;
+
+	// フィールド名に応じて表示名を設定
+        if ($fieldName === 'id') {
+            continue;
+        } elseif ($fieldName === 's_number') {
+            $displayName = '学籍番号';
+        } elseif ($fieldName === 'name') {
+            $displayName = '氏名';
+        } elseif ($fieldName === 'subject') {
+            $displayName = '科目';
+        } elseif ($fieldName === 'sub') {
+            $displayName = '状況';
+        } elseif ($fieldName === 'day') {
+            $displayName = '提出日';
+        }
+        
+        echo "<td><b>".$displayName."</b></td>"; // 日本語名を出力
+    }
 }
+
 
 //テーブルの行数と同じ回数を繰り返す
 while($row=mysqli_fetch_array($rs)){
@@ -53,6 +74,9 @@ while($row=mysqli_fetch_array($rs)){
 	
 //テーブルの列数と同じ回数を繰り返す
 	for($j=0;$j<$num;$j++){
+		if ($j === 0) { 
+            continue;
+        }
 	
 //HTML文を出力 列の内容を <td>で囲んで出力
 		print("<td>".$row[$j]."</td>");

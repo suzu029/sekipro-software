@@ -1,0 +1,83 @@
+/* 基本レイアウト */
+body {
+    font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f4f7f6; /* 少し青みのあるグレーで目に優しく */
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* メッセージ表示エリア */
+body > b, 
+body {
+    font-size: 1.1rem;
+}
+
+/* テーブルのスタイリング */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* 角丸を適用するため */
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #e74c3c; /* 削除画面なので警告色の赤系 */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* リンク・ボタンのスタイリング */
+a {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db; /* 青色 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+/* 「メニュー」リンクだけ色を変える場合（任意） */
+a[href="myphp.php"] {
+    background-color: #95a5a6; /* グレー */
+}
+
+a[href="myphp.php"]:hover {
+    background-color: #7f8c8d;
+}
+
+/* 強調文字（正常に削除しました、など） */
+strong, b {
+    color: #d35400;
+}
+
+/* エラーメッセージ用の装飾（PHP側でクラスを振っていないので汎用） */
+body {
+    word-wrap: break-word;
+}
