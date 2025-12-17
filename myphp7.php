@@ -18,8 +18,8 @@ print("</HEAD>\n");
 $maxline = 5;
 
 //DBへ接続開始 サーバー名--localhost ユーザー名--root パスワード--root
-$dbHandle = mysqli_connect("localhost","root","171641")
-  or die("can not connect db\n");
+$dbHandle = mysqli_connect("localhost", "root", "171641", "student", 3307)
+    or die("DB接続エラー: " . mysqli_connect_error());
   
 //MySQLのクライアントの文字コードをutf8に設定
 mysqli_set_charset($dbHandle, "utf8");

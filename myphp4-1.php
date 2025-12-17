@@ -31,7 +31,7 @@ if ($record_id === false || $record_id === null) {
 
 //DBへ接続開始 サーバー名--localhost ユーザー名--root パスワード--root
 
-$dbHandle = mysqli_connect("localhost","root","171641")
+$dbHandle = mysqli_connect("localhost", "root", "171641", "student", 3307)
     or die("DB接続エラー: " . mysqli_connect_error());
 mysqli_set_charset($dbHandle, "utf8");
 mysqli_select_db($dbHandle,"student");
