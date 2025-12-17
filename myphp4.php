@@ -7,10 +7,9 @@ print("<HEAD>\n");
 
 //文字コードをUTF-8と指定
 print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
-
+print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp4.css\">\n");
 //HTML文を出力 TITLEの指定
 print("<TITLE>myphp4</TITLE>\n");
-
 // 削除ボタンが押された際に確認メッセージを出力するJavascriptの記述の開始
 print("<SCRIPT language=JavaScript>\n");
 print("\n");
@@ -35,11 +34,8 @@ if (strlen(filter_input(INPUT_POST,'s_number')) == 0) {
     print("</FORM>");
 
 } else {
-    // 学籍番号が入力されている場合：検索結果を表示
     $search_s_number = filter_input(INPUT_POST,'s_number');
 
-    //DBへ接続開始 サーバー名--localhost ユーザー名--root パスワード--root
-    // ★★★ 「〇〇」を実際のデータベースパスワードに置き換えてください ★★★
     $dbHandle = mysqli_connect("localhost","root","171641")
         or die("DB接続エラー: " . mysqli_connect_error());
     mysqli_set_charset($dbHandle, "utf8");
