@@ -18,7 +18,7 @@
     print("<BODY>\n");
 
 //ACTOR_CDフィールドへの入力の有無をチェック
-if (strlen(filter_input(INPUT_POST,'s_number')) == 0) {
+if (strlen(filter_input(INPUT_POST, 's_number') ?? '') == 0) {
 
 //HTML文を出力 登録確認
     print("<b>登録変更</b><br><br>");
