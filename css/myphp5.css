@@ -64,11 +64,14 @@ select {
     transition: border-color 0.3s;
 }
 
-input[type="text"]:focus,
-select:focus {
-    border-color: #3498db;
-    outline: none;
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
 }
+
 
 /* セレクトボックスの矢印カスタム */
 select {
