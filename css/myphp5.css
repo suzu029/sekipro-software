@@ -1,104 +1,144 @@
+/* 全体のレイアウト設定 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ebebebef; 
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    background-color: #f4f7f6; /* 少し柔らかいグレーに変更 */
     text-align: center; 
     padding: 50px 20px;
     margin: 0;
-    max-width: 640px; 
+    max-width: 800px; /* テーブルが見やすいよう少し広げました */
     margin: 0 auto;
+    color: #333;
 }
 
+/* タイトル（bタグをタイトルとして使用） */
 b {
     display: block; 
-    font-size: 3.5em;
-    color: #000000;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* 3.5emは大きすぎたため調整 */
+    color: #2c3e50;
+    margin-bottom: 30px;
     text-align: center;
 }
 
-form {
-    background-color: #ffffff; 
-    padding: 30px;
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    margin: 20px auto 40px;
+    border-collapse: collapse; 
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 450px; 
-    margin: 0 auto; 
+    overflow: hidden; /* 角丸を適用するため */
 }
 
+th, td {
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+th {
+    background-color: #3498db; 
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fcfcfc; 
+}
+
+tr:hover {
+    background-color: #f1f7ff; 
+}
+
+
+/* 入力フィールド */
 input[type="text"],
 select {
-
-    padding: 10px 15px;
-    margin-top: 5px; /* 上のラベルとの間隔 */
-    margin-bottom: 10px; /* 下の要素との間隔 */
+    width: 100%; /* 幅いっぱいに広げる */
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* paddingとborderを幅に含める */
+    border-radius: 6px;
+    box-sizing: border-box;
     font-size: 1em;
+    transition: border-color 0.3s;
 }
 
+input[type="text"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* セレクトボックスの矢印カスタム */
 select {
     appearance: none; 
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="292.4" height="292.4"><path fill="#007bff" d="M287 64.9L146.4 205.4 5.8 64.9c-7.9-7.9-20.6-7.9-28.5 0s-7.9 20.6 0 28.5l142.1 142.1c7.9 7.9 20.6 7.9 28.5 0l142.1-142.1c7.9-7.9 7.9-20.6 0-28.5-7.8-7.9-20.5-7.9-28.4 0z"/></svg>');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path fill="#666" d="M10.3 3.3L6 7.6 1.7 3.3A1 1 0 00.3 4.7l5 5a1 1 0 001.4 0l5-5a1 1 0 10-1.4-1.4z"/></svg>');
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+    background-position: right 15px center;
     cursor: pointer;
 }
 
+/* 送信・リセットボタン（フォーム内） */
 input[type="submit"],
 input[type="reset"] {
     display: inline-block;
-    padding: 10px 20px;
-    margin-right: 15px; 
+    padding: 12px 25px;
+    margin: 5px 10px; 
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: auto; 
+    transition: background-color 0.3s ease, transform 0.1s;
 }
 
 input[type="submit"] {
-    background-color: #007bff; 
+    background-color: #3498db; 
     color: white;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
 
-
 input[type="reset"] {
-    background-color: #6c757d; /* グレー */
+    background-color: #95a5a6; 
     color: white;
 }
 
 input[type="reset"]:hover {
-    background-color: #5a6268;
+    background-color: #7f8c8d;
 }
 
-
+/* 操作・リンクボタン (aタグ) - ここを重点的に修正 */
 a {
-    display: inline-block; 
-    width: 100px; 
-    box-sizing: border-box; 
-    
-    padding: 10px 10px;
-    margin: 10px 5px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    padding: 12px 20px;
+    margin: 10px 8px;
     
     border-radius: 8px; 
     text-decoration: none; 
     font-weight: bold; 
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     
-    background-color: #ffffff; 
-    color: #333; 
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.5s, box-shadow 0.2s; 
+    background-color: #34495e; /* ダークネイビーで操作感を強調 */
+    color: #ffffff; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease; 
 }
+
 a:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    background-color: #2c3e50;
+    transform: translateY(-3px); /* 浮き上がる演出 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: #ffffff;
+}
+
+a:active {
+    transform: translateY(-1px);
 }
