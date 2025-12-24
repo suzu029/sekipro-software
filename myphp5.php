@@ -8,6 +8,8 @@
 //文字コードをUTF-8と指定
     print("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=\"UTF-8\">\n");
 
+    print("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/myphp5.css\">\n");
+
 //HTML文を出力 TITLEの指定
     print("<TITLE>myphp5</TITLE>\n");
 
@@ -18,7 +20,7 @@
     print("<BODY>\n");
 
 //ACTOR_CDフィールドへの入力の有無をチェック
-if (strlen(filter_input(INPUT_POST,'s_number')) == 0) {
+if (strlen(filter_input(INPUT_POST, 's_number') ?? '') == 0) {
 
 //HTML文を出力 登録確認
     print("<b>登録変更</b><br><br>");
@@ -115,7 +117,7 @@ if ($rows > 0) {
     mysqli_close($dbHandle);
 }
 //HTML文を出力 javascriptを使用して直前のページに戻るリンク
-print ("<br><a href=javascript:history.back()>戻る</a><br>");
+print ("<a href=javascript:history.back()>戻る</a>");
 
 //HTML文を出力 BODYの終了
 print("</BODY>\n");
@@ -124,5 +126,4 @@ print("</BODY>\n");
 print("</HTML>\n");
 
 ?>
-<br>
-<a href="myphp.php">メニュー</a><br>
+<a href="myphp.php">メニュー</a>
