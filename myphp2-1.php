@@ -94,7 +94,7 @@ if ($stmt) {
     // 入力された学籍番号の行があった場合はデータを出力する
     if ($rows > 0) {
         print("<b>検索結果</b><br><br>");
-        print("<h1>学籍番号 [" . htmlspecialchars($search_s_number) . "] の**" . $sub_display_text . "**データが " . $rows . " 件見つかりました。</h1><br><br>");
+        print("<h1>学籍番号 [" . htmlspecialchars($search_s_number) . "] の" . $sub_display_text . "データが " . $rows . " 件見つかりました。</h1><br><br>");
 
         print("<TABLE border=1>");
         print("<tr>");
@@ -117,7 +117,7 @@ if ($stmt) {
 
     } else {
         // 入力された学籍番号の行が存在しなかった場合、または該当データがなかった場合はメッセージを出力する
-        print("学籍番号 [" . htmlspecialchars($search_s_number) . "] の**" . $sub_display_text . "**データは登録されていません<br>");
+        print("学籍番号 [" . htmlspecialchars($search_s_number) . "] の" . $sub_display_text . "データは登録されていません<br>");
     }  
 
     //結果レコードをメモリから開放
@@ -134,7 +134,7 @@ if ($stmt) {
 mysqli_close($dbHandle);
 
 //HTML文を出力 javascriptを使用して直前のページに戻るリンク
-print ("<br><a href=javascript:history.back()>戻る</a><br>");
+//print ("<br><a href=javascript:history.back()>戻る</a><br>");
 
 //HTML文を出力 BODYの終了
 print("</BODY>\n");

@@ -117,7 +117,7 @@ if ($rows > 0) {
     mysqli_close($dbHandle);
 }
 //HTML文を出力 javascriptを使用して直前のページに戻るリンク
-print ("<a href=javascript:history.back()>戻る</a>");
+//print ("<a href=javascript:history.back()>戻る</a>");
 
 //HTML文を出力 BODYの終了
 print("</BODY>\n");
