@@ -90,7 +90,7 @@ if (strlen(filter_input(INPUT_POST, 's_number') ?? '') == 0) {
 }
 
 //HTML文を出力 javascriptを使用して直前のページに戻るリンク
-print ("<br><a href=javascript:history.back()>戻る</a><br>"); // 検索フォームに戻る
+//print ("<br><a href=javascript:history.back()>戻る</a><br>"); // 検索フォームに戻る
 print("</BODY>\n");
 print("</HTML>\n");
 ?>

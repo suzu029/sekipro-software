@@ -26,7 +26,7 @@ print("<b>新規登録</b><br><br>");
 print("<FORM action=myphp3-1.php method=post>");
 
 //HTML文を出力 入力フィールドの説明
-print("新規登録するデータを入力してください<br><br>");
+//print("新規登録するデータを入力してください<br><br>");
 
 //HTML文を出力 TABLEの開始
 print("<TABLE border=1>");
